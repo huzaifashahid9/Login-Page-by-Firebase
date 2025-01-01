@@ -8,13 +8,24 @@ const inputPass = document.getElementById("inputPass")
 const inputEmail = document.getElementById("inputEmail")
 const inputPass1 = document.getElementById("inputPass1")
 const inputEmail1 = document.getElementById("inputEmail1")
+const create = document.querySelector(".create")
+const loogin = document.querySelector(".login")
 
 // console.log(inputPass);
 // console.log(inputEmail);
 
 
+const creating =() =>{
+    console.log("hello");
+    
+    create.style.display = "block";
+    loogin.style.display = "none";
+}
 
-
+const signin = () =>{
+    create.style.display = "none";
+    loogin.style.display = "block";
+}
 
 const signup = async () =>{
     try {
@@ -49,13 +60,15 @@ const login = async () =>{
 
 
 function show(){
-    inputPass.type = "text"
+    inputPass1.type = "text"
 }
 function hide(){
-    inputPass.type = "password"
+    inputPass1.type = "password"
 }
 
 window.hide = hide
 window.show = show
 window.signup = signup
 window.login = login
+window.creating = creating
+window.signin = signin

@@ -58,3 +58,7 @@ a{
 .text-gray{
     color: gray;
 }
+
+.create{
+    display: none;
+}
