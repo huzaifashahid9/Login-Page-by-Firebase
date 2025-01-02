@@ -35,6 +35,7 @@ const signup = async () =>{
         const user = await createUserWithEmailAndPassword(auth, email, pass)
         console.log("user", user)
         alert("Account Successfully Created");
+        window.location.href="./index.html"
     } catch (error) {
         console.log(error.message);
         alert(error.code);
@@ -51,6 +52,7 @@ const login = async () =>{
         const user = await signInWithEmailAndPassword(auth, email, pass)
         console.log("user", user)
         alert("Account Successfully Login");
+        window.location.href="./index.html"
     } catch (error) {
         console.log(error.message);
         alert(error.code);
